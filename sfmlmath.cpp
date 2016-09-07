@@ -13,7 +13,7 @@ sfmlmath::~sfmlmath()
 
 float sfmlmath::point_distance(sf::Vector2f a, sf::Vector2f b)
 {
-	return sqrt((a.x - b.x)*(a.x - b.x) + (a.y - b.y)*(a.y - b.y)) / 2;
+	return sqrt((a.x - b.x)*(a.x - b.x) + (a.y - b.y)*(a.y - b.y));
 }
 
 sf::Vector2f sfmlmath::centerPoint(sf::Vector2f a, sf::Vector2f b)

@@ -30,7 +30,7 @@ void CirclrPainter::drawing(sf::Vector2i point)
 void CirclrPainter::paint()
 {
 	sf::Vector2f circle_center=sfmlmath::centerPoint(Startpoint, EndPoint);
-	float r= sfmlmath::point_distance(Startpoint,EndPoint);
+	float r = sfmlmath::point_distance(Startpoint, EndPoint) / 2;
 	sf::VertexArray circle(sf::LinesStrip, 37);
 	for (int i = 0; i <= 360; i += 10)
 	{
@@ -46,7 +46,7 @@ void CirclrPainter::ExitDraw(sf::Vector2i point)
 	{
 		isDrawing = false;
 		sf::Vector2f circle_center = sfmlmath::centerPoint(Startpoint, EndPoint);
-		float r = sfmlmath::point_distance(Startpoint, EndPoint);
+		float r = sfmlmath::point_distance(Startpoint, EndPoint) / 2;
 		Graph *circle = new Circle(circle_center,r);
 		Painter::container.add(circle);
 	}
